@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="Game">
+    </div>
+    <div id="Wins">
+    </div>
+    <div id="Losses">
+    </div>
+    <div id="Guesses Left">
+    </div>
+    <div id="Your Guesses so Far">
+    </div>
+
+    <script type="text/javascript">
+
+        var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+        var wins = 0
+        var losses = 0
+        var guessesLeft = 10
+        var yourGuessSoFar = 0
+
+        // Runs this funtions whenever user presses key
+
+        document.onkeyup = function (event) {
+            var userGuess = event.key
+            console.log(userGuess)
+
+            var computerAnswer = computerChoices[Math.floor(Math.random() * computerChoices.length)]
+            console.log(computerAnswer)
+
+            if (userGuess === computerAnswer) {
+                wins++
+                console.log("Correct!")
+                console.log(wins)
+            }
+
+            else {
+                losses++
+                console.log("Wrong! Try Again")
+                console.log(losses)
+            }
+           
+        }
+    </script>
+
+</body>
+
+</html>
