@@ -12,49 +12,25 @@
 </head>
 
 <body>
-
-    <div id="Game">
+    <div id="game">
+        <h1>The Psychic Game</h1>
     </div>
-    <div id="Wins">
+    <div id="wins">
+        <p>Wins:</p>
     </div>
-    <div id="Losses">
+    <div id="losses">
+        <p>Losses: </p>
     </div>
-    <div id="Guesses Left">
+    <div id="guessesLeft">
+        <p>Guesses Left</p>
     </div>
-    <div id="Your Guesses so Far">
+    <div id="youGuessesSoFar">
+        <p>Your Guesses so Far:</p>
     </div>
 
-    <script type="text/javascript">
-
-        var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-        var wins = 0
-        var losses = 0
-        var guessesLeft = 10
-        var yourGuessSoFar = 0
-
-        // Runs this funtions whenever user presses key
-
-        document.onkeyup = function (event) {
-            var userGuess = event.key
-            console.log(userGuess)
-
-            var computerAnswer = computerChoices[Math.floor(Math.random() * computerChoices.length)]
-            console.log(computerAnswer)
-
-            if (userGuess === computerAnswer) {
-                wins++
-                console.log("Correct!")
-                console.log(wins)
-            }
-
-            else {
-                losses++
-                console.log("Wrong! Try Again")
-                console.log(losses)
-            }
-           
-        }
-    </script>
+    
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 
